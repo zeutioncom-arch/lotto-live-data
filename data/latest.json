@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "seed",
+  "draw_no": 1250,
+  "draw_date": "2026-11-14",
+  "numbers": [
+    1,
+    5,
+    18,
+    23,
+    27,
+    28
+  ],
+  "bonus": 8,
+  "ranks": {
+    "1": {
+      "winners": 9,
+      "prize_per_game": 3103164459
+    },
+    "2": {
+      "winners": 100,
+      "prize_per_game": 46547467
+    },
+    "3": {
+      "winners": null,
+      "prize_per_game": 1491906
+    }
+  },
+  "source_url": "https://www.dhlottery.co.kr/lt645/result",
+  "verified_at_kst": null,
+  "note": "참고용 초기 데이터. 자동 검증에 통과하기 전에는 검증 완료로 표시하지 않습니다."
+}
