@@ -1,0 +1,39 @@
+name: Update verified Lotto 6/45 result
+on:
+  workflow_dispatch:
+  schedule:
+    # Sat 21:17~Sun 01:17 Korea (UTC Sat 12:17~16:17)
+    - cron: '17 12,13,14,15,16 * * 6'
+    # Daily fallback 12:23 Korea
+    - cron: '23 3 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: lotto-data-update
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test collector
+        run: python -m unittest discover -s tests -v
+      - name: Fetch and validate official results
+        run: python scripts/update_lotto.py
+      - name: Commit only when data changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/latest.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data: update verified lotto draw"
+            git push
+          else
+            echo "No new verified data"
+          fi
