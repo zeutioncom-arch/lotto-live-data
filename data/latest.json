@@ -1,32 +1,32 @@
 {
   "schema_version": 1,
   "status": "verified",
-  "draw_no": 1250,
-  "draw_date": "2026-11-14",
+  "draw_no": 1251,
+  "draw_date": "2026-11-21",
   "numbers": [
-    1,
-    5,
+    14,
     18,
-    23,
-    27,
-    28
+    19,
+    29,
+    40,
+    45
   ],
-  "bonus": 8,
+  "bonus": 1,
   "ranks": {
     "1": {
-      "winners": 9,
-      "prize_per_game": 3103164459
+      "winners": 14,
+      "prize_per_game": 2068843286
     },
     "2": {
-      "winners": 100,
-      "prize_per_game": 46547467
+      "winners": 96,
+      "prize_per_game": 50284386
     },
     "3": {
-      "winners": 3120,
-      "prize_per_game": 1491906
+      "winners": 2851,
+      "prize_per_game": 1693196
     }
   },
   "source_url": "https://www.dhlottery.co.kr/lt645/result",
   "source_query": "https://www.dhlottery.co.kr/lt645/selectPstLt645Info.do",
-  "verified_at_kst": "2026-11-15T04:04:37+09:00"
+  "verified_at_kst": "2026-11-22T04:11:41+09:00"
 }
